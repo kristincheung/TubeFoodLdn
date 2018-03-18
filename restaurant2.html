@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tube Food</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+</style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> <a href="" class="navbar-brand"><img src="https://i.imgur.com/vwkGp5o.jpg" height="60"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="restaurant2.html">Restaurant of the Month</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="title">
+    <h1>Marvellous March</h1>
+    <h4>This month's featured restaurant brings us to <strong>Ethos</strong> at <strong>Oxford Circus!</strong></h4>
+  </div>
+
+
+  <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src="1ethos_339.jpg" style="width:100%">
+    <img class="mySlides" src="ethos1.jpeg" style="width:100%">
+    <img class="mySlides" src="ethos2.jpeg" style="width:100%">
+  </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button>
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>
+  </div>
+
+
+
+  <p>
+  You'll be spoilt for choice with Ethos' array of vegetarian delights, including their infamous veggie scotch eggs, deep fried halloumi and potato lyonnaise. There's a brilliant selection of wholesome salads, hearty dishes and elaborate desserts to choose from.
+  Just pile up your plate with whatever you fancy and take it over to the counter to be weighed. Perfect for meeting special dietary requirements and catching up with and old friend after work. I'd definitely recommend saving some space for dessert!
+  </p>
+
+
+
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" w3-red", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-red";
+  }
+  </script>
+
+
+
+  <div class="footer">
+    <ul class="soc">
+      <li><a class="soc-twitter" href="#"></a></li>
+      <li><a class="soc-facebook" href="#"></a></li>
+      <li><a class="soc-rss soc-icon-last" href="#"></a></li>
+    </ul>
+    <ul class="list-unstyled list-inline list-footer">
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Newsletter</a></li>
+    </ul>
+  </div>
+</body>
+</html>
